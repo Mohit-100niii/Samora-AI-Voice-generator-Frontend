@@ -1,4 +1,4 @@
-# Full Stack Text-to-Speech Web Application
+# Samora AI -Full Stack Text-to-Speech Web Application
 
 A full-stack web application that generates speech from text using the PlayAI Text API. This project utilizes **React** with **TailwindCSS** on the frontend, **Node.js** with **Express** and **MongoDB** on the backend, and **Clerk** for authentication.
 
@@ -63,8 +63,3 @@ The project is deployed using **Netlify** for the frontend and **Heroku** (or yo
 - **Backend**: Deployment to **Heroku** or your preferred cloud service.
 
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/your-username/your-repository-name.git
-   cd your-repository-name
