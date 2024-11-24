@@ -17,6 +17,10 @@ You can check out the live version of the application here:
 **[Live Demo](https://elegant-semifreddo-f9bf5c.netlify.app/)**
 
 ---
+![image](https://github.com/user-attachments/assets/1628bf18-6b43-4492-9e49-02b1f70e4555)
+![image](https://github.com/user-attachments/assets/b49541f9-c62c-4650-9eb1-531a95b7ef58)
+
+
 
 ## Technologies Used
 
