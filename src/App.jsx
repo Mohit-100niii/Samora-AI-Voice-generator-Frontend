@@ -50,45 +50,10 @@ export default function App() {
         },
       });
 
-      // try {
-      //   const response = await axios.post(
-      //     // "http://localhost:5000/api/text-to-speech",
-      //     "https://ai-voice-generator-backend.onrender.com/api/text-to-speech",
-      //     {
-      //       text: inputText,
-      //     },
-      //     {
-      //       responseType: "blob",
-      //     }
-      //   );
-
-      //   const audioUrl = URL.createObjectURL(response.data);
-      //   setAudioSrc(audioUrl);
-      //   if (audioRef.current) {
-      //     audioRef.current.load();
-      //   }
-      // } catch (error) {
-      //   if(error.response.status==403)
-      //   {
-      //     Swal.fire({
-      //       icon: "error",
-      //       text: "Run out of Credentials please try in few days",
-      //     });
-      //   }
-
-      //   Swal.fire({
-      //     icon: "error",
-      //     text: "An unexpected error occurred. Please try again.",
-      //   });
-      //   console.error(error);
-      // } finally {
-      //   setIsLoading(false);
-      //   Swal.close();
-      // }
+   
       try {
         const response = await axios.post(
           "http://localhost:5000/api/text-to-speech",
-          // "https://ai-voice-generator-backend.onrender.com/api/text-to-speech",
           {
             text: inputText,
           },
@@ -103,9 +68,7 @@ export default function App() {
           audioRef.current.load();
         }
       } catch (error) {
-        // Check if the error response exists
         if (error.response) {
-          // Handle 403 Forbidden Error
           if (error.response.status === 403) {
             Swal.fire({
               icon: "error",
@@ -224,8 +187,8 @@ export default function App() {
 
       // Save audio URL and inputText to your backend
       const data = await axios.post(
-        // "http://localhost:5000/api/savedaudio",
-        "https://ai-voice-generator-backend.onrender.com/api/savedaudio",
+        "http://localhost:5000/api/savedaudio",
+        // "https://ai-voice-generator-backend.onrender.com/api/savedaudio",
         {
           inputText,
           audiourl: cloudinaryUrl,
