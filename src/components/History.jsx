@@ -40,10 +40,7 @@ export default function History() {
   const fetchUserAudios = async () => {
     try {
       const { data } = await axios.get(
-        // `http://localhost:5000/api/data?email=${encodeURIComponent(email)}`
-        `https://ai-voice-generator-backend.onrender.com/api/data?email=${encodeURIComponent(
-          email
-        )}`
+        `http://localhost:5000/api/data?email=${encodeURIComponent(email)}`
       );
       setUserData(data.UserSavedData);
     } catch (error) {
@@ -54,8 +51,7 @@ export default function History() {
   const deleteAudio = async (id) => {
     try {
       console.log("start");
-      // await axios.delete(`http://localhost:5000/api/delete?id=${id}`);
-      await axios.delete(`https://ai-voice-generator-backend.onrender.com/api/delete?id=${id}`);
+      await axios.delete(`http://localhost:5000/api/delete?id=${id}`);
 
       fetchUserAudios();
     } catch (error) {
